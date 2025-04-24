@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Signals | Upload</title>
+    <link rel="stylesheet" href="{{'../static/styles.css'}}">
+</head>
+<body>
+    <header>
+        <h1>Hot Signals: Cell Tower Maintenance</h1>
+        <nav>
+            <ul>
+            <li><a href="./home">Home</a></li>
+            <li><a href="./upload">Upload Images</a></li>
+            <li><a href="./gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="userInput">
+            <h2>Analyze Your Towers</h2>
+            <p>Upload screenshots or videos of your cell tower here!</p>
+            <form id="uploadMedia" action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" id="media-input" name="media" accept="image/*,video/*" multiple required>
+                <br>
+                <button type="submit">Analyze Your Media</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>
+            Lana Tran | <a href="https://www.linkedin.com/in/lana-tran-pie/">LinkedIn</a></li> | <a href="https://github.com/Pieisawesome/HotSignals#">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>

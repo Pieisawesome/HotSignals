@@ -1,0 +1,35 @@
+header {
+    background-color: #b0b0b0;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+footer {
+    background-color: #909090;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0;
+    display: inline;
+    margin-right: 10px;
+}
+
+#welcome, #viewProfiles, #userInput{
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #d5c3c3;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+
+}
