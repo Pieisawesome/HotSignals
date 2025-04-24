@@ -20,7 +20,13 @@
 
     <main>
         <section id="viewProfiles">
-            
+            <div class="gallery">
+                {% for tower in towers %}
+                    <a href="/profile/{{ tower.id }}">
+                        <img src="{{ url_for('static', filename=tower.thumbnail) }}" alt="Tower {{ tower.id }}" style="max-width: 200px; margin: 10px;">
+                    </a>
+                {% endfor %}
+            </div>
         </section>
     </main>
 

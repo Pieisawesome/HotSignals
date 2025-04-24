@@ -42,7 +42,8 @@ Object Detection Models / Criteria
     Rating is sent back with data found
 
 Photo And Details Storage
-    
+    Photo in static/photos/#
+    Details stored in database, primary key is linked with number
 
 
 ```
