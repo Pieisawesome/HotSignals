@@ -4,29 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Signals | Gallery </title>
-    <link rel="stylesheet" href="{{'../static/styles.css'}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        img {
+            max-width: 300px; /* Set the maximum width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Hot Signals: Cell Tower Maintenance</h1>
         <nav>
             <ul>
-            <li><a href="./home">Home</a></li>
-            <li><a href="./upload">Upload Images</a></li>
-            <li><a href="./gallery">Gallery</a></li>
+                <li><a href="{{ url_for('homePage') }}">Home</a></li>
+                <li><a href="{{ url_for('uploadPage') }}">Upload Images</a></li>
+                <li><a href="{{ url_for('galleryPage') }}">Gallery</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="towerProfile">
-            
-        </section>
+        <section id = "towerProfile">
+            <section id="towerImages">
+                <h2> Images </h2>
+                {% for image in images %}
+                    <div>
+                        <img src="{{ url_for('static', filename='photos/' ~ profile_id ~ '/' ~ image) }}" alt="Image {{ loop.index }}">                
+                    </div>
+                {% endfor %}
+            </section>
+            <section id="towerDetails">
+                <h2> Details & Analysis</h2>
+                <p> Antenna Interference: {{antennaDif}} <br> Rust Level: {{rustLevel}} <br> Tower Placement To Buildings: {{background}} <br> Unknown Objects: {{unknownObject}} <br> Maintenance Rating: {{total}} </p>
+            </section>
+        </section> 
     </main>
 
     <footer>
         <p>
-            Lana Tran | <a href="https://www.linkedin.com/in/lana-tran-pie/">LinkedIn</a></li> | <a href="https://github.com/Pieisawesome/HotSignals#">GitHub</a>
+            Lana Tran | <a href="https://www.linkedin.com/in/lana-tran-pie/">LinkedIn</a> | <a href="https://github.com/Pieisawesome/HotSignals#">GitHub</a>
         </p>
     </footer>
 </body>

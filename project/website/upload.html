@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Signals | Upload</title>
-    <link rel="stylesheet" href="{{'../static/styles.css'}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <h1>Hot Signals: Cell Tower Maintenance</h1>
         <nav>
             <ul>
-            <li><a href="./home">Home</a></li>
-            <li><a href="./upload">Upload Images</a></li>
-            <li><a href="./gallery">Gallery</a></li>
+                <li><a href="{{ url_for('homePage') }}">Home</a></li>
+                <li><a href="{{ url_for('uploadPage') }}">Upload Images</a></li>
+                <li><a href="{{ url_for('galleryPage') }}">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
 
     <footer>
         <p>
-            Lana Tran | <a href="https://www.linkedin.com/in/lana-tran-pie/">LinkedIn</a></li> | <a href="https://github.com/Pieisawesome/HotSignals#">GitHub</a>
+            Lana Tran | <a href="https://www.linkedin.com/in/lana-tran-pie/">LinkedIn</a> | <a href="https://github.com/Pieisawesome/HotSignals#">GitHub</a>
         </p>
     </footer>
 </body>
